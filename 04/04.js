@@ -1,6 +1,8 @@
+let dia = prompt("Que dia es hoy?");
+
 let tengoQueTrabajar = (dia) => {
   if (dia == "sabado" || dia == "domingo") {
-    return "no trabajas";
+    alert("No trabajas");
   } else if (
     dia == "lunes" ||
     dia == "martes" ||
@@ -8,10 +10,11 @@ let tengoQueTrabajar = (dia) => {
     dia == "jueves" ||
     dia == "viernes"
   ) {
-    return "tenes que trabajar";
+    alert("Tenes que trabajar");
   } else {
-    return "escribiste cualquier cosa";
+    alert("Escribiste cualquier cosa");
   }
 };
 
-console.log(tengoQueTrabajar("domingo"));
+// console.log(tengoQueTrabajar("domingo"));
+prompt(tengoQueTrabajar(dia));

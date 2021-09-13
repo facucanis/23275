@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=	, initial-scale=1.0">
+	<title>Document</title>
+<body>
+
+<h1>CURSO JAVASCRIPT - CLASE 5</h1>
+<br><br>
+
+<p id="demo"></p>
+
+<script>
+var factura = {
+    empresa: "unit.org",
+    direccion: "anaxagoras, 424",
+    telefono: "5555 5555",
+    cliente: {
+        nombre: "hola.sa",
+        descripcion: "servicio",
+        precio: 100,
+        cantidad: "1",
+     },
+    iva: 1.2,
+    forma_de_pago: "efectivo", 
+    gran_total: function() {
+       
+       subTotal = this.cliente.precio * this.iva / 10;
+       
+       return subTotal;
+
+     },
+    total: function() {
+       total = this.gran_total()+this.cliente.precio;
+
+       return total;
+     },
+};
+
+document.getElementById("demo").innerHTML = "El total a pagar es de " + factura.total();
+
+</script>
+
+</body>
+</html>
